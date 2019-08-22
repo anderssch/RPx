@@ -2,9 +2,6 @@ RPx
 ==========================================
 
 This is an automatic theorem prover [RPx][RPx] for first order logic without equality. 
-It accepts problems in [TPTP format][TPTP] but only cnf problems have been tested.
-
-This software is released under the [MIT License][MITLicense].
 
 The TPTP Parser and the clausifier is based on Metis development version a0e808d746fa1f14cf944bed0d395d0df991320d
 http://www.gilith.com/software/metis/
@@ -50,7 +47,6 @@ to clean out any object files.
 [MLton]: http://www.mlton.org/ "MLton compiler"
 [PolyML]: http://www.polyml.org/ "Poly/ML compiler"
 [MoscowML]: http://www.dina.dk/~sestoft/mosml.html "Moscow ML compiler"
-[MITLicense]: https://github.com/gilith/metis/blob/master/LICENSE "MIT License"
 [TPTP]: http://www.tptp.org "TPTP"
 
 Acknowledgements
