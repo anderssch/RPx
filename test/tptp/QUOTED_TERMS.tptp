@@ -1,0 +1,19 @@
+% -----------------------------------------------------------------------------
+% Name: QUOTED TERMS
+%
+% Formula, predicate, function and constant names can be single quoted.
+% -----------------------------------------------------------------------------
+
+fof('A quoted formula name',axiom,p(a)).
+
+fof(a,axiom,'quoted predicate'(X)).
+
+fof(b,axiom,'quoted proposition').
+
+fof(c,axiom,p('quoted function'(a))).
+
+fof(d,axiom,p('quoted constant')).
+
+fof(e,axiom,p('quoted constant with escaped \'\\ characters')).
+
+fof(f,conjecture,p('quoted constant')).

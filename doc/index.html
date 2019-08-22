@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Metis Theorem Prover</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+
+<table cellpadding="2">
+<tr>
+<td><a href="changelog.html">changelog</a></td>
+<td width="10"></td>
+<td><a href="download.html">download</a></td>
+<td width="10"></td>
+<td><b>home</b></td>
+<td width="10"></td>
+<td><a href="install.html">install</a></td>
+<td width="10"></td>
+<td><a href="notes.html">notes</a></td>
+<td width="10"></td>
+<td><a href="performance.html">performance</a></td>
+</tr>
+</table>
+
+<hr />
+
+<h3>What is Metis?</h3>
+
+<p>Metis is an
+
+<a href="http://www.cs.miami.edu/~tptp/OverviewOfATP.html">automatic theorem prover</a>
+
+for first order logic with equality.</p>
+
+<h3>Features of Metis</h3>
+
+<p>
+<ul>
+
+<li>Coded in
+
+<a href="http://www.smlnj.org/sml.html">Standard ML</a>
+
+(SML) with an emphasis on keeping the code as simple as possible.</li>
+
+<li>Compiled using
+
+<a href="http://www.mlton.org/">MLton</a>
+
+to give
+
+<a href="performance.html">respectable performance</a>
+
+on standard benchmarks.</li>
+
+<li>Reads in problems in the standard <tt>.tptp</tt> file format of
+the
+
+<a href="http://www.tptp.org">TPTP problem set</a>.</li>
+
+<li>Outputs
+
+<a href="example-cnf-proof.txt">detailed</a>
+
+<a href="example-fof-proof.txt">proofs</a>
+
+in
+
+<a href="http://www.tptp.org/TSTP">TSTP format</a>,
+
+where each refutation step is one of
+
+<a href="logical-kernel.txt">6 simple rules</a>.</li>
+
+<li>Outputs
+
+<a href="example-fof-model.txt">saturated clause sets</a>
+
+when input problems are discovered to be unprovable.</li>
+
+</ul>
+</p>
+
+<h3>Project Status</h3>
+
+<p>Metis is being maintained: the
+
+<a href="download.html">latest version</a>
+
+is
+
+Metis 2.4 (release 20180810).
+
+Metis is free software, released under the
+
+<a href="MIT-LICENSE">MIT License</a>.
+
+To adapt Metis for your own application I recommend forking the
+
+<a href="https://github.com/gilith/metis">development version</a>.</p>
+
+<h3>Contact</h3>
+
+<p>To report a bug or request an enhancement, please file an issue at
+
+<a href="https://github.com/gilith/metis/issues">GitHub</a>.</p>
+
+<hr />
+
+<img src="metis.jpg" alt="Metis (the moon of Jupiter)" />
+
+</body>
+</html>

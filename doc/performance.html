@@ -1,0 +1,931 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Metis Performance Benchmarks</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+
+<table cellpadding="2">
+<tr>
+<td><a href="changelog.html">changelog</a></td>
+<td width="10"></td>
+<td><a href="download.html">download</a></td>
+<td width="10"></td>
+<td><a href="index.html">home</a></td>
+<td width="10"></td>
+<td><a href="install.html">install</a></td>
+<td width="10"></td>
+<td><a href="notes.html">notes</a></td>
+<td width="10"></td>
+<td><b>performance</b></td>
+</tr>
+</table>
+
+<hr />
+
+<h3>Metis Performance Benchmarks</h3>
+
+<h4><a href="http://www.cs.miami.edu/~tptp/CASC/23/">CASC 23 (2011)</a></h4>
+
+<p>Metis 2.3 was entered in the competition with this
+
+<a href="casc-23-system-description.html">System Description</a>.</p>
+
+<table border="1" cellpadding="3" cellspacing="0">
+<tr>
+<th align="left">FOF</th>
+<th align="left">Attempted</th>
+<th align="left">Solved</th>
+<th align="left">Av. Time</th>
+<th align="left">Solutions</th>
+</tr>
+<tr>
+<td align="left"><i>Vampire 0.6</i></td>
+<td align="right">300</td>
+<td align="right">269</td>
+<td align="right">12.95</td>
+<td align="right">269</td>
+</tr>
+<tr>
+<td align="left">Vampire 1.8</td>
+<td align="right">300</td>
+<td align="right">263</td>
+<td align="right">13.62</td>
+<td align="right">263</td>
+</tr>
+<tr>
+<td align="left">E-MaLeS 1.0</td>
+<td align="right">300</td>
+<td align="right">233</td>
+<td align="right">18.85</td>
+<td align="right">233</td>
+</tr>
+<tr>
+<td align="left">EP 1.4pre</td>
+<td align="right">300</td>
+<td align="right">232</td>
+<td align="right">22.55</td>
+<td align="right">232</td>
+</tr>
+<tr>
+<td align="left">iProver 0.9</td>
+<td align="right">300</td>
+<td align="right">192</td>
+<td align="right">9.22</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">leanCoP 2.2</td>
+<td align="right">300</td>
+<td align="right">136</td>
+<td align="right">46.80</td>
+<td align="right">136</td>
+</tr>
+<tr>
+<td align="left">iProver-Eq 0.7</td>
+<td align="right">300</td>
+<td align="right">135</td>
+<td align="right">8.68</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">E-KRHyper 1.2</td>
+<td align="right">300</td>
+<td align="right">109</td>
+<td align="right">8.93</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">E-Darwin 1.4</td>
+<td align="right">300</td>
+<td align="right">103</td>
+<td align="right">6.97</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left"><b>Metis 2.3</b></td>
+<td align="right"><b>300</b></td>
+<td align="right"><b>101</b></td>
+<td align="right"><b>24.75</b></td>
+<td align="right"><b>101</b></td>
+</tr>
+<tr>
+<td align="left">LEO-II 1.2.8</td>
+<td align="right">300</td>
+<td align="right">97</td>
+<td align="right">25.18</td>
+<td align="right">94</td>
+</tr>
+<tr>
+<td align="left">Otter 3.3</td>
+<td align="right">300</td>
+<td align="right">62</td>
+<td align="right">5.84</td>
+<td align="right">62</td>
+</tr>
+<tr>
+<td align="left">Muscadet 4.1</td>
+<td align="right">300</td>
+<td align="right">42</td>
+<td align="right">8.99</td>
+<td align="right">40</td>
+</tr>
+</table>
+
+<p>In the FOF division the time limit was 300 seconds, and Metis 2.3
+solved 101 out of 300 problems with an average time of 24.75 seconds.</p>
+
+<p>The competition website includes the
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/23/WWWFiles/ResultsSummary.html">division results</a>,
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/23/WWWFiles/Results.html">individual problem results</a>
+
+and
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/23/WWWFiles/ResultsPlots.html">performance graphs</a>.</p>
+
+<h4><a href="http://www.cs.miami.edu/~tptp/CASC/J5/">CASC J5 (2010)</a></h4>
+
+<p>Metis 2.2 was entered in the competition with this
+
+<a href="casc-j5-system-description.html">System Description</a>.</p>
+
+<table border="1" cellpadding="3" cellspacing="0">
+<tr>
+<th align="left">FOF</th>
+<th align="left">Attempted</th>
+<th align="left">Solved</th>
+<th align="left">Av. Time</th>
+<th align="left">Solutions</th>
+</tr>
+<tr>
+<td align="left">Vampire 0.6</td>
+<td align="right">200</td>
+<td align="right">178</td>
+<td align="right">14.16</td>
+<td align="right">178</td>
+</tr>
+<tr>
+<td align="left">E 1.2pre</td>
+<td align="right">200</td>
+<td align="right">143</td>
+<td align="right">10.20</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">EP 1.2pre</td>
+<td align="right">200</td>
+<td align="right">143</td>
+<td align="right">14.77</td>
+<td align="right">143</td>
+</tr>
+<tr>
+<td align="left"><i>Vampire 11.0</i></td>
+<td align="right">200</td>
+<td align="right">125</td>
+<td align="right">44.92</td>
+<td align="right">125</td>
+</tr>
+<tr>
+<td align="left">iProver 0.8</td>
+<td align="right">200</td>
+<td align="right">117</td>
+<td align="right">25.55</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Equinox 5.0</td>
+<td align="right">200</td>
+<td align="right">108</td>
+<td align="right">17.40</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">iProver-E 0.6</td>
+<td align="right">200</td>
+<td align="right">90</td>
+<td align="right">18.09</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">E-Darwin 1.3</td>
+<td align="right">200</td>
+<td align="right">81</td>
+<td align="right">25.29</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">leanCoP 2.2</td>
+<td align="right">200</td>
+<td align="right">54</td>
+<td align="right">42.61</td>
+<td align="right">54</td>
+</tr>
+<tr>
+<td align="left">Zenon 0.6.3</td>
+<td align="right">200</td>
+<td align="right">46</td>
+<td align="right">36.03</td>
+<td align="right">45</td>
+</tr>
+<tr>
+<td align="left">LEO-II 1.2</td>
+<td align="right">200</td>
+<td align="right">45</td>
+<td align="right">45.01</td>
+<td align="right">45</td>
+</tr>
+<tr>
+<td align="left">Geo 2010C</td>
+<td align="right">200</td>
+<td align="right">42</td>
+<td align="right">22.74</td>
+<td align="right">42</td>
+</tr>
+<tr>
+<td align="left"><b>Metis 2.2</b></td>
+<td align="right"><b>200</b></td>
+<td align="right"><b>36</b></td>
+<td align="right"><b>32.68</b></td>
+<td align="right"><b>36</b></td>
+</tr>
+<tr>
+<td align="left">E-KRHyp 1.1.4</td>
+<td align="right">200</td>
+<td align="right">32</td>
+<td align="right">24.27</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Otter 3.3</td>
+<td align="right">200</td>
+<td align="right">18</td>
+<td align="right">9.30</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td align="left">Muscadet 4.0</td>
+<td align="right">200</td>
+<td align="right">15</td>
+<td align="right">3.89</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td align="left">Ayane 2</td>
+<td align="right">200</td>
+<td align="right">0</td>
+<td align="right">-</td>
+<td align="right">0</td>
+</tr>
+</table>
+
+<p>In the FOF division the time limit was 240 seconds, and Metis 2.2
+solved 36 out of 200 problems with an average time of 32.68 seconds.</p>
+
+<p>The competition website includes the
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/J5/WWWFiles/ResultsSummary.html">division results</a>,
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/J5/WWWFiles/Results.html">individual problem results</a>
+
+and
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/J5/WWWFiles/ResultsPlots.html">performance graphs</a>.</p>
+
+<h4><a href="http://www.cs.miami.edu/~tptp/CASC/22/">CASC 22 (2009)</a></h4>
+
+<p>Metis 2.2 was entered in the competition with this
+
+<a href="casc-22-system-description.html">System Description</a>.</p>
+
+<table border="1" cellpadding="3" cellspacing="0">
+<tr>
+<th align="left">FOF</th>
+<th align="left">Attempted</th>
+<th align="left">Solved</th>
+<th align="left">Av. Time</th>
+<th align="left">Solutions</th>
+</tr>
+<tr>
+<td align="left">Vampire 11.0</td>
+<td align="right">300</td>
+<td align="right">233</td>
+<td align="right">33.00</td>
+<td align="right">233</td>
+</tr>
+<tr>
+<td align="left">E 1.1pre</td>
+<td align="right">300</td>
+<td align="right">219</td>
+<td align="right">23.89</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Vampire 10.0</td>
+<td align="right">300</td>
+<td align="right">219</td>
+<td align="right">35.06</td>
+<td align="right">219</td>
+</tr>
+<tr>
+<td align="left">EP 1.1pre</td>
+<td align="right">300</td>
+<td align="right">218</td>
+<td align="right">26.83</td>
+<td align="right">217</td>
+</tr>
+<tr>
+<td align="left">iProver 0.7</td>
+<td align="right">300</td>
+<td align="right">174</td>
+<td align="right">24.79</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Equinox 4.1</td>
+<td align="right">300</td>
+<td align="right">119</td>
+<td align="right">24.08</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">leanCoP</td>
+<td align="right">300</td>
+<td align="right">113</td>
+<td align="right">37.02</td>
+<td align="right">113</td>
+</tr>
+<tr>
+<td align="left">iProver-Eq 0.5</td>
+<td align="right">300</td>
+<td align="right">88</td>
+<td align="right">26.58</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left"><b>Metis 2.2</b></td>
+<td align="right"><b>300</b></td>
+<td align="right"><b>84</b></td>
+<td align="right"><b>24.73</b></td>
+<td align="right"><b>84</b></td>
+</tr>
+<tr>
+<td align="left">E-KRHyper 1.1.3</td>
+<td align="right">300</td>
+<td align="right">81</td>
+<td align="right">21.96</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Otter 3.3</td>
+<td align="right">300</td>
+<td align="right">58</td>
+<td align="right">12.90</td>
+<td align="right">58</td>
+</tr>
+<tr>
+<td align="left">OSHL-S 0.6</td>
+<td align="right">300</td>
+<td align="right">40</td>
+<td align="right">33.83</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Infinox 1.0</td>
+<td align="right">300</td>
+<td align="right">0</td>
+<td align="right">-</td>
+<td align="right">0</td>
+</tr>
+</table>
+
+<p>In the FOF division the time limit was 300 seconds, and Metis 2.2
+solved 84 out of 300 problems with an average time of 24.73 seconds.</p>
+
+<p>The competition website includes the
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/22/WWWFiles/ResultsSummary.html">division results</a>,
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/22/WWWFiles/Results.html">individual problem results</a>
+
+and
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/22/WWWFiles/ResultsPlots.html">performance graphs</a>.</p>
+
+<h4><a href="http://www.cs.miami.edu/~tptp/CASC/J4">CASC J4 (2008)</a></h4>
+
+<p>Metis 2.1 was entered in the competition with this
+
+<a href="casc-j4-system-description.html">System Description</a>.</p>
+
+<table border="1" cellpadding="3" cellspacing="0">
+<tr>
+<th align="left">FOF</th>
+<th align="left">Attempted</th>
+<th align="left">Solved</th>
+<th align="left">Av. Time</th>
+<th align="left">Solutions</th>
+</tr>
+<tr>
+<td align="left">Vampire 10.0</td>
+<td align="right">200</td>
+<td align="right">169</td>
+<td align="right">27.81</td>
+<td align="right">169</td>
+</tr>
+<tr>
+<td align="left">E 1.0pre</td>
+<td align="right">200</td>
+<td align="right">164</td>
+<td align="right">15.52</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">EP 1.0pre</td>
+<td align="right">200</td>
+<td align="right">164</td>
+<td align="right">20.97</td>
+<td align="right">161</td>
+</tr>
+<tr>
+<td align="left">Vampire 9.0</td>
+<td align="right">200</td>
+<td align="right">163</td>
+<td align="right">25.67</td>
+<td align="right">163</td>
+</tr>
+<tr>
+<td align="left">iProver 0.5c</td>
+<td align="right">200</td>
+<td align="right">139</td>
+<td align="right">10.29</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">randoCoP 1.1</td>
+<td align="right">200</td>
+<td align="right">95</td>
+<td align="right">21.51</td>
+<td align="right">95</td>
+</tr>
+<tr>
+<td align="left">Equinox 3.0</td>
+<td align="right">200</td>
+<td align="right">86</td>
+<td align="right">20.16</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left"><b>Metis 2.1</b></td>
+<td align="right"><b>200</b></td>
+<td align="right"><b>84</b></td>
+<td align="right"><b>16.19</b></td>
+<td align="right"><b>84</b></td>
+</tr>
+<tr>
+<td align="left">Otter 3.3</td>
+<td align="right">200</td>
+<td align="right">76</td>
+<td align="right">17.92</td>
+<td align="right">76</td>
+</tr>
+<tr>
+<td align="left">E-KRHyper 1.1</td>
+<td align="right">200</td>
+<td align="right">60</td>
+<td align="right">16.31</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Zenon 0.5.0</td>
+<td align="right">200</td>
+<td align="right">51</td>
+<td align="right">4.33</td>
+<td align="right">51</td>
+</tr>
+<tr>
+<td align="left">Muscadet 3.0</td>
+<td align="right">200</td>
+<td align="right">38</td>
+<td align="right">8.77</td>
+<td align="right">31</td>
+</tr>
+<tr>
+<td align="left">OSHL-S 0.1</td>
+<td align="right">200</td>
+<td align="right">27</td>
+<td align="right">4.97</td>
+<td align="right">0</td>
+</tr>
+</table>
+
+<p>In the FOF division the time limit was 300 seconds, and Metis 2.1
+solved 84 out of 200 problems with an average time of 16.19 seconds.</p>
+
+<p>The competition website includes the
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/J4/WWWFiles/ResultsSummary.html">division results</a>,
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/J4/WWWFiles/Results.html">individual problem results</a>
+
+and
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/J4/WWWFiles/ResultsPlots.html">performance graphs</a>.</p>
+
+<h4><a href="http://www.cs.miami.edu/~tptp/CASC/21">CASC 21 (2007)</a></h4>
+
+<p>Metis 2.0 was entered in the competition with this
+
+<a href="casc-21-system-description.html">System Description</a>.</p>
+
+<table border="1" cellpadding="3" cellspacing="0">
+<tr>
+<th align="left">FOF</th>
+<th align="left">Attempted</th>
+<th align="left">Solved</th>
+<th align="left">Av. Time</th>
+<th align="left">Solutions</th>
+</tr>
+<tr>
+<td align="left">Vampire 9.0</td>
+<td align="right">300</td>
+<td align="right">270</td>
+<td align="right">20.84</td>
+<td align="right">270</td>
+</tr>
+<tr>
+<td align="left">Vampire 8.1</td>
+<td align="right">300</td>
+<td align="right">266</td>
+<td align="right">16.37</td>
+<td align="right">266</td>
+</tr>
+<tr>
+<td align="left">Fampire 1.3</td>
+<td align="right">300</td>
+<td align="right">262</td>
+<td align="right">12.19</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">E 0.999</td>
+<td align="right">300</td>
+<td align="right">248</td>
+<td align="right">13.36</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">EP 0.999</td>
+<td align="right">300</td>
+<td align="right">225</td>
+<td align="right">13.10</td>
+<td align="right">221</td>
+</tr>
+<tr>
+<td align="left">iProver 0.2</td>
+<td align="right">300</td>
+<td align="right">201</td>
+<td align="right">9.57</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Equinox 1.2</td>
+<td align="right">300</td>
+<td align="right">173</td>
+<td align="right">14.92</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">leanCoP 2.0</td>
+<td align="right">300</td>
+<td align="right">160</td>
+<td align="right">39.50</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Otter 3.3</td>
+<td align="right">300</td>
+<td align="right">138</td>
+<td align="right">25.04</td>
+<td align="right">138</td>
+</tr>
+<tr>
+<td align="left"><b>Metis 2.0</b></td>
+<td align="right"><b>300</b></td>
+<td align="right"><b>117</b></td>
+<td align="right"><b>16.06</b></td>
+<td align="right"><b>89</b></td>
+</tr>
+<tr>
+<td align="left">Geo 2007f</td>
+<td align="right">300</td>
+<td align="right">104</td>
+<td align="right">29.42</td>
+<td align="right">104</td>
+</tr>
+<tr>
+<td align="left">ileanCoP 1.2</td>
+<td align="right">300</td>
+<td align="right">103</td>
+<td align="right">44.23</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Muscadet 2.7</td>
+<td align="right">300</td>
+<td align="right">37</td>
+<td align="right">0.76</td>
+<td align="right">0</td>
+</tr>
+</table>
+
+<p>In the FOF division the time limit was 360 seconds, and Metis 2.0
+solved 117 out of 300 problems with an average time of 16.06 seconds.
+The number of solutions is only 89 because the other 28 problems were
+solved by the FOF &rarr; CNF normalization.</p>
+
+<p>The competition website includes the
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/21/WWWFiles/ResultsSummary.html">division results</a>,
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/21/WWWFiles/Results.html">individual problem results</a>
+
+and
+
+<a href="http://www.cs.miami.edu/~tptp/CASC/21/WWWFiles/ResultsPlots.html">performance graphs</a>.</p>
+
+<p>Here is the
+
+<a href="casc-21-report.txt">paragraph on Metis 2.0</a>
+
+contributed to the CASC 21 report.</p>
+
+<h4><a href="http://www.cs.miami.edu/~tptp/CASC/19">CASC 19 (2003)</a></h4>
+
+<p>Metis 1.5 was not entered in the official competition, but was run
+afterwards on the problems used in the competition.</p>
+
+<table border="1" cellpadding="3" cellspacing="0">
+<tr>
+<th align="left">MIX</th>
+<th align="left">Attempted</th>
+<th align="left">Solved</th>
+<th align="left">Av. Time</th>
+<th align="left">Solutions</th>
+</tr>
+<tr>
+<td align="left">Vampire 6.0</td>
+<td align="right">140</td>
+<td align="right">120</td>
+<td align="right">65.64</td>
+<td align="right">120</td>
+</tr>
+<tr>
+<td align="left">E-SETHEO csp03</td>
+<td align="right">140</td>
+<td align="right">119</td>
+<td align="right">34.65</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">E 0.8</td>
+<td align="right">140</td>
+<td align="right">113</td>
+<td align="right">20.91</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Vampire 5.0</td>
+<td align="right">140</td>
+<td align="right">113</td>
+<td align="right">23.08</td>
+<td align="right">113</td>
+</tr>
+<tr>
+<td align="left">EP 0.8</td>
+<td align="right">140</td>
+<td align="right">113</td>
+<td align="right">25.35</td>
+<td align="right">110</td>
+</tr>
+<tr>
+<td align="left">Gandalf c-2.6</td>
+<td align="right">140</td>
+<td align="right">102</td>
+<td align="right">67.75</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Gandalf c-2.6-PRF</td>
+<td align="right">140</td>
+<td align="right">79</td>
+<td align="right">30.94</td>
+<td align="right">79</td>
+</tr>
+<tr>
+<td align="left">DCTP 10.2p</td>
+<td align="right">140</td>
+<td align="right">72</td>
+<td align="right">43.28</td>
+<td align="right">0</td>
+</tr>
+
+<tr>
+<td align="left"><b>Metis 1.5</b></td>
+<td align="right"><b>140</b></td>
+<td align="right"><b>71</b></td>
+<td align="right"><b>81.07</b></td>
+<td align="right"><b>71</b></td>
+</tr>
+
+<tr>
+<td align="left">DCTP 1.3</td>
+<td align="right">140</td>
+<td align="right">55</td>
+<td align="right">18.15</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">THEO J2003</td>
+<td align="right">140</td>
+<td align="right">49</td>
+<td align="right">45.59</td>
+<td align="right">47</td>
+</tr>
+<tr>
+<td align="left">Otter 3.2</td>
+<td align="right">140</td>
+<td align="right">34</td>
+<td align="right">99.12</td>
+<td align="right">34</td>
+</tr>
+<tr>
+<td align="left">CARINE 0.72</td>
+<td align="right">140</td>
+<td align="right">7</td>
+<td align="right">104.86</td>
+<td align="right">7</td>
+</tr>
+</table>
+
+<p>In the MIX division the time limit was 600 seconds, and Metis 1.5
+solved 71 out of 140 problems with an average time of 81.07
+seconds.</p>
+
+<p>In the UEQ division the time limit was 600 seconds, and Metis 1.5
+solved 21 out of 70 problems with an average time of 68.68
+seconds.</p>
+
+<p>In the FOF division the time limit was 600 seconds, and Metis 1.5
+solved 32 out of 70 problems with an average time of 49.87
+seconds.</p>
+
+<p>Metis is running on a RedHat 7.1 GNU/Linux box with a Pentium III
+600Mhz processor and 512Mb of main memory; the other provers are
+running on Dell Precision 330 workstations (GNU/Linux boxes with
+Pentium III 1Ghz processors and 512Mb of main memory).</p>
+
+<p>
+
+<h4><a href="http://www.cs.miami.edu/~tptp/CASC/18">CASC 18 (2002)</a></h4>
+
+<p>Metis 1.5 was not entered in the official competition, but was run
+afterwards on the problems used in the competition.</p>
+
+<table border="1" cellpadding="3" cellspacing="0">
+<tr>
+<th align="left">MIX</th>
+<th align="left">Attempted</th>
+<th align="left">Solved</th>
+<th align="left">Av. Time</th>
+<th align="left">Solutions</th>
+</tr>
+<tr>
+<td align="left">Vampire 5.0</td>
+<td align="right">175</td>
+<td align="right">158</td>
+<td align="right">25.25</td>
+<td align="right">158</td>
+</tr>
+<tr>
+<td align="left">Vampire 5.0-CASC</td>
+<td align="right">175</td>
+<td align="right">157</td>
+<td align="right">27.28</td>
+<td align="right">157</td>
+</tr>
+<tr>
+<td align="left">Vampire 2.0-CASC</td>
+<td align="right">175</td>
+<td align="right">152</td>
+<td align="right">57.33</td>
+<td align="right">152</td>
+</tr>
+<tr>
+<td align="left">E-SETHEO csp02</td>
+<td align="right">175</td>
+<td align="right">145</td>
+<td align="right">57.60</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">E 0.7</td>
+<td align="right">175</td>
+<td align="right">131</td>
+<td align="right">21.35</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">EP 0.7</td>
+<td align="right">175</td>
+<td align="right">129</td>
+<td align="right">25.58</td>
+<td align="right">129</td>
+</tr>
+<tr>
+<td align="left">Gandalf c-2.5</td>
+<td align="right">175</td>
+<td align="right">129</td>
+<td align="right">82.92</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Gandalf c-2.5-PROOF</td>
+<td align="right">175</td>
+<td align="right">125</td>
+<td align="right">77.47</td>
+<td align="right">125</td>
+</tr>
+
+<tr>
+<td align="left"><b>Metis 1.5</b></td>
+<td align="right"><b>175</b></td>
+<td align="right"><b>97</b></td>
+<td align="right"><b>77.42</b></td>
+<td align="right"><b>97</b></td>
+</tr>
+
+<tr>
+<td align="left">Bliksem 1.12a</td>
+<td align="right">175</td>
+<td align="right">88</td>
+<td align="right">43.99</td>
+<td align="right">88</td>
+</tr>
+<tr>
+<td align="left">DCTP 10.1p</td>
+<td align="right">175</td>
+<td align="right">76</td>
+<td align="right">41.18</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">SCOTT 6.1</td>
+<td align="right">175</td>
+<td align="right">63</td>
+<td align="right">74.48</td>
+<td align="right">63</td>
+</tr>
+<tr>
+<td align="left">Otter 3.2</td>
+<td align="right">175</td>
+<td align="right">60</td>
+<td align="right">56.34</td>
+<td align="right">60</td>
+</tr>
+<tr>
+<td align="left">DCTP 1.2</td>
+<td align="right">175</td>
+<td align="right">56</td>
+<td align="right">45.03</td>
+<td align="right">0</td>
+</tr>
+</table>
+
+<p>In the MIX division the time limit was 600 seconds, and Metis 1.5
+solved 97 out of 175 problems with an average time of 77.42
+seconds.</p>
+
+<p>In the UEQ division the time limit was 300 seconds, and Metis 1.5
+solved 7 out of 70 problems with an average time of 50.45 seconds.</p>
+
+<p>In the FOF division the time limit was 300 seconds, and Metis 1.5
+solved 35 out of 70 problems with an average time of 32.09
+seconds.</p>
+
+<p>Metis is running on a RedHat 7.1 GNU/Linux box with a Pentium III
+600Mhz processor and 512Mb of main memory; the other provers are
+running on Dell Precision 330 workstations (GNU/Linux boxes with
+Pentium III 1Ghz processors and 512Mb of main memory).</p>
+
+<hr />
+
+<img src="metis.jpg" alt="Metis the moon of Jupiter" />
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Metis Changelog</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+
+<table cellpadding="2">
+<tr>
+<td><b>changelog</b></td>
+<td width="10"></td>
+<td><a href="download.html">download</a></td>
+<td width="10"></td>
+<td><a href="index.html">home</a></td>
+<td width="10"></td>
+<td><a href="install.html">install</a></td>
+<td width="10"></td>
+<td><a href="notes.html">notes</a></td>
+<td width="10"></td>
+<td><a href="performance.html">performance</a></td>
+</tr>
+</table>
+
+<hr />
+
+<h3>Changes to Metis</h3>
+
+<!-- <p>Recent Changes</p> -->
+
+<p>Version 2.4: 1 March 2018</p>
+
+<ul>
+
+<li>Moved development of Metis to
+
+<a href="https://github.com/gilith/metis">GitHub</a>
+
+and archiving
+
+<a href="https://github.com/gilith/metis/releases">releases</a>
+
+there to enable build reproducibility.</li>
+
+<li>Added a
+
+<a href="http://www.gilith.com/metis/mailing-list/2010-September/000001.html"><kbd>--time-limit N</kbd></a>
+
+command line argument.</li>
+
+<li>Fixed a soundness bug in the CNF normalization discovered by Jonathan Prieto-Cubides.</li>
+
+<li>Fixed two incompleteness bugs in the proof engine discovered by Michael Farber.</li>
+
+</ul>
+
+<p>Version 2.3: 11 September 2010</p>
+
+<ul>
+
+<li>Released sources under the
+
+<a href="MIT-LICENSE">MIT License</a>.</li>
+
+<li>Interpret TPTP functions and relations in a finite model to guide
+clause selection.</li>
+
+<li>Process TPTP include directives.</li>
+
+<li>Handle TPTP block comments.</li>
+
+</ul>
+
+<p>Version 2.2: 18 March 2009</p>
+
+<ul>
+
+<li>Accept input problems in TPTP syntax that contain a mix of CNF and
+FOF formulas.</li>
+
+<li>Ported to
+
+<a href="http://www.polyml.org/">Poly/ML</a>.</li>
+
+<li>Estimate error locations when parsing TPTP problem files.</li>
+
+<li>Output normalization steps in TSTP format.</li>
+
+</ul>
+
+<p>Version 2.1: 1 February 2008</p>
+
+<ul>
+
+<li>Basic splitting of FOF conjecture formulas.</li>
+
+<li>Weight clauses using finite models generated from the problem
+axioms.</li>
+
+<li>Output proofs in TSTP format.</li>
+
+</ul>
+
+<p>Version 2.0: 21 May 2007</p>
+
+<ul>
+
+<li>Complete rewrite, dropping from 13,000 to 10,000 lines of code and
+using the new Standard ML basis library.</li>
+
+<li>The only implemented calculus is ordered resolution and ordered
+paramodulation, with no sticky ordering constraints.</li>
+
+<li>Reads in problems in the new TPTP format.</li>
+
+</ul>
+
+<p>Version 1.5: 14 January 2004</p>
+
+<ul>
+
+<li>Scheduling provers is no longer based on time used, but rather
+number of inferences.</li>
+
+<li>Reads problems in TPTP First-Order Formula (FOF) syntax.</li>
+
+<li>Simplification of resolution clauses using disequation literals.</li>
+
+<li>Implemented finite models to guide clause selection in resolution.</li>
+
+<li>The model elimination prover optimizes the order of rules and
+literals within rules.</li>
+
+</ul>
+
+<p>Version 1.4: 2 October 2003</p>
+
+<ul>
+
+<li>Added an ordered resolution prover to the default set.</li>
+
+<li>Improved resolution performance with a special-purpose datatype
+for inter-reducing equations.</li>
+
+</ul>
+
+<p>Version 1.3: 18 June 2003</p>
+
+<ul>
+
+<li>Better benchmarking using new MLton source-level profiling.</li>
+
+<li>Resolution is more robust and efficient, and includes an option
+for clauses to inherit ordering constraints.</li>
+
+<li>Standardized command-line option processing.</li>
+
+</ul>
+
+<p>Version 1.2: 19 November 2002</p>
+
+<ul>
+
+<li>Standalone version created using the
+
+<a href="http://mlton.org/">MLton</a>
+
+compiler.</li>
+
+<li>Ground-up rewrite of resolution, which now performs ordered
+resolution and ordered paramodulation.</li>
+
+</ul>
+
+<p>Version 1.1: 21 September 2002</p>
+
+<ul>
+
+<li>Improved model elimination performance with better caching.</li>
+
+<li>First-order substitutions are now fully Boultonized.</li>
+
+<li>The logical kernel performs peep-hole optimizations to keep proofs
+as small as possible.</li>
+
+</ul>
+
+<p>Version 1.0: 18 July 2002</p>
+
+<ul>
+
+<li>Released sources under version 2 of the GPL License.</li>
+
+</ul>
+
+<hr />
+
+<img src="metis.jpg" alt="Metis the moon of Jupiter" />
+
+</body>
+</html>

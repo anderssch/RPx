@@ -1,0 +1,17 @@
+.git
+.gitignore
+metis/LICENSE
+metis/Makefile.dev
+metis/README.md
+metis/doc/DONT-RELEASE
+metis/release
+metis/scripts/compare
+metis/scripts/copy_problem
+metis/scripts/export_hol
+metis/scripts/extract_proof
+metis/scripts/graph
+metis/scripts/ml_lines
+metis/scripts/mosml_dep
+metis/scripts/release_stamp
+metis/scripts/summarize
+metis/src/benchmark.sml

@@ -1,0 +1,38 @@
+% -----------------------------------------------------------------------------
+% Name: BLOCK COMMENTS
+%
+% Check parsing of TPTP block comments.
+% -----------------------------------------------------------------------------
+
+/* Single-line block comment */
+
+/* Block comment containing ' single quote */
+
+/* Block comment containing % line comment opener */
+
+/* Block comment containing /* block comment opener */
+
+/* Multi-line
+   block
+   comment */
+
+/* Multi-line block comment containing awkward
+% line comment opener */
+
+cnf('formula name containing % line comment opener', axiom,
+    (~killed(X, Y) | hates(X, Y))).
+
+fof('formula name containing /* block comment opener', axiom,
+    (? [X] : (lives(X) & killed(X, agatha)) &
+     (lives(agatha) & lives(butler) & lives(charles)) &
+     ! [X] : (lives(X) => (X = agatha | X = butler | X = charles)) &
+     ! [X, Y] : (killed(X, Y) => ~ richer(X, Y)) &
+     ! [X] : (hates(agatha, X) => ~ hates(charles, X)) &
+     ! [X] : /* Random stuff
+                over two lines */ (X != butler => hates(agatha, X)) &
+     ! [X] : (~ richer(X, agatha) => hates(butler, X)) &
+     ! [X] : (hates(agatha, X) => hates(butler, X)) &
+     ! [X] : ? [Y] : ~ hates(X, Y) & agatha != butler)).
+
+fof(goal, conjecture,
+    (killed(agatha, agatha))).

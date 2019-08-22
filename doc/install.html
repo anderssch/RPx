@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Install Metis</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+
+<table cellpadding="2">
+<tr>
+<td><a href="changelog.html">changelog</a></td>
+<td width="10"></td>
+<td><a href="download.html">download</a></td>
+<td width="10"></td>
+<td><a href="index.html">home</a></td>
+<td width="10"></td>
+<td><b>install</b></td>
+<td width="10"></td>
+<td><a href="notes.html">notes</a></td>
+<td width="10"></td>
+<td><a href="performance.html">performance</a></td>
+</tr>
+</table>
+
+<hr />
+
+<h3>Installing Metis from Source</h3>
+
+<p>Installing Metis from source requires an installation of either
+
+<a href="http://www.mlton.org/">MLton</a>,
+
+<a href="http://www.polyml.org/">Poly/ML</a>
+
+or
+
+<a href="http://www.dina.dk/~sestoft/mosml.html">Moscow ML</a>,
+
+as well as standard system tools including GNU Make and Perl.</p>
+
+<ol>
+
+<li><a href="download.html">Download</a>
+
+the <tt>metis.tar.gz</tt> file.</li>
+
+<li>Extract it with the command <tt>tar xvzf metis.tar.gz</tt></li>
+
+<li>There will be a new directory called <tt>metis</tt>. Change to
+this directory.</li>
+
+<li>To build using
+
+<a href="http://www.mlton.org/">MLton</a>:
+
+<ul>
+
+<li>Build with the command <tt>make mlton</tt></li>
+
+<li>Test with the command <tt>bin/mlton/metis &#45;&#45;help</tt></li>
+
+</ul>
+</li>
+
+<li>To build using
+
+<a href="http://www.polyml.org/">Poly/ML</a>:
+
+<ul>
+
+<li>Build with the command <tt>make polyml</tt></li>
+
+<li>Test with the command <tt>bin/polyml/metis &#45;&#45;help</tt></li>
+
+</ul>
+</li>
+
+<li>To build using
+
+<a href="http://www.dina.dk/~sestoft/mosml.html">Moscow ML</a>:
+
+<ul>
+
+<li>Build with the command <tt>make mosml</tt></li>
+
+<li>Test with the command <tt>bin/mosml/metis &#45;&#45;help</tt></li>
+
+</ul>
+</li>
+
+<li>If the test results in a usage message, the installation was
+successful.</li>
+
+<li>A more serious test is to prove the benchmark problems using the command <tt>path/to/metis data/problems/benchmark/*</tt></li>
+
+</ol>
+
+<p>If anything goes wrong, you can use the command <tt>make clean</tt>
+to clean out any object files.</p>
+
+<h3>Troubleshooting</h3>
+
+<p>To report a bug or request an enhancement, please file an issue at
+
+<a href="https://github.com/gilith/metis/issues">GitHub</a>.</p>
+
+<hr />
+
+<img src="metis.jpg" alt="Metis the moon of Jupiter" />
+
+</body>
+</html>

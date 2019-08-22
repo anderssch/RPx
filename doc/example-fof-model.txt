@@ -1,0 +1,491 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Problem: data/problems/all/MGT019+2.tptp
+
+Goal:
+~(!E T.
+    environment E /\
+    subpopulations first_movers efficient_producers E T ==>
+    greater (disbanding_rate first_movers T)
+      (disbanding_rate efficient_producers T)) /\
+(!T.
+   greater (disbanding_rate first_movers T)
+     (disbanding_rate efficient_producers T) /\
+   greater_or_equal (founding_rate efficient_producers T)
+     (founding_rate first_movers T) ==>
+   greater (growth_rate efficient_producers T)
+     (growth_rate first_movers T)) /\
+(!X Y. greater_or_equal X Y ==> greater X Y \/ X = Y) /\
+(!E.
+   environment E /\ stable E ==>
+   ?To.
+     in_environment E To /\
+     !T.
+       subpopulations first_movers efficient_producers E T /\
+       greater_or_equal T To ==>
+       greater_or_equal (founding_rate efficient_producers T)
+         (founding_rate first_movers T)) ==>
+!E.
+  environment E /\ stable E ==>
+  ?To.
+    in_environment E To /\
+    !T.
+      subpopulations first_movers efficient_producers E T /\
+      greater_or_equal T To ==>
+      greater (growth_rate efficient_producers T)
+        (growth_rate first_movers T)
+
+Clauses:
+~greater (disbanding_rate first_movers skolemFOFtoCNF_T)
+   (disbanding_rate efficient_producers skolemFOFtoCNF_T) /\
+environment skolemFOFtoCNF_E /\
+subpopulations first_movers efficient_producers skolemFOFtoCNF_E
+  skolemFOFtoCNF_T /\
+(~greater (disbanding_rate first_movers $T)
+    (disbanding_rate efficient_producers $T) \/
+ ~greater_or_equal (founding_rate efficient_producers $T)
+    (founding_rate first_movers $T) \/
+ greater (growth_rate efficient_producers $T)
+   (growth_rate first_movers $T)) /\
+(~greater_or_equal $X $Y \/ $X = $Y \/ greater $X $Y) /\
+(~environment $E \/ ~stable $E \/
+ in_environment $E (skolemFOFtoCNF_To $E)) /\
+(~environment $E \/ ~greater_or_equal $T (skolemFOFtoCNF_To $E) \/
+ ~stable $E \/ ~subpopulations first_movers efficient_producers $E $T \/
+ greater_or_equal (founding_rate efficient_producers $T)
+   (founding_rate first_movers $T)) /\ environment skolemFOFtoCNF_E_1 /\
+stable skolemFOFtoCNF_E_1 /\
+(~greater (growth_rate efficient_producers (skolemFOFtoCNF_T_1 $To))
+    (growth_rate first_movers (skolemFOFtoCNF_T_1 $To)) \/
+ ~in_environment skolemFOFtoCNF_E_1 $To) /\
+(~in_environment skolemFOFtoCNF_E_1 $To \/
+ greater_or_equal (skolemFOFtoCNF_T_1 $To) $To) /\
+(~in_environment skolemFOFtoCNF_E_1 $To \/
+ subpopulations first_movers efficient_producers skolemFOFtoCNF_E_1
+   (skolemFOFtoCNF_T_1 $To))
+
+% SZS status CounterSatisfiable for data/problems/all/MGT019+2.tptp
+
+SZS output start Saturation for data/problems/all/MGT019+2.tptp
+|- ~greater (disbanding_rate first_movers skolemFOFtoCNF_T)
+      (disbanding_rate efficient_producers skolemFOFtoCNF_T)
+|- environment skolemFOFtoCNF_E
+|- subpopulations first_movers efficient_producers skolemFOFtoCNF_E
+     skolemFOFtoCNF_T
+|- ~greater (disbanding_rate first_movers $T)
+      (disbanding_rate efficient_producers $T) \/
+   ~greater_or_equal (founding_rate efficient_producers $T)
+      (founding_rate first_movers $T) \/
+   greater (growth_rate efficient_producers $T)
+     (growth_rate first_movers $T)
+|- ~greater_or_equal $X $Y \/ $X = $Y \/ greater $X $Y
+|- ~environment $E \/ ~stable $E \/
+   in_environment $E (skolemFOFtoCNF_To $E)
+|- ~environment $E \/ ~greater_or_equal $T (skolemFOFtoCNF_To $E) \/
+   ~stable $E \/ ~subpopulations first_movers efficient_producers $E $T \/
+   greater_or_equal (founding_rate efficient_producers $T)
+     (founding_rate first_movers $T)
+|- environment skolemFOFtoCNF_E_1
+|- stable skolemFOFtoCNF_E_1
+|- ~greater (growth_rate efficient_producers (skolemFOFtoCNF_T_1 $To))
+      (growth_rate first_movers (skolemFOFtoCNF_T_1 $To)) \/
+   ~in_environment skolemFOFtoCNF_E_1 $To
+|- ~in_environment skolemFOFtoCNF_E_1 $To \/
+   greater_or_equal (skolemFOFtoCNF_T_1 $To) $To
+|- ~in_environment skolemFOFtoCNF_E_1 $To \/
+   subpopulations first_movers efficient_producers skolemFOFtoCNF_E_1
+     (skolemFOFtoCNF_T_1 $To)
+|- in_environment skolemFOFtoCNF_E_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)
+|- subpopulations first_movers efficient_producers skolemFOFtoCNF_E_1
+     (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1))
+|- greater_or_equal
+     (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1))
+     (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)
+|- skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1) =
+   skolemFOFtoCNF_To skolemFOFtoCNF_E_1 \/
+   greater (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1))
+     (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)
+|- ~greater_or_equal skolemFOFtoCNF_T
+      (skolemFOFtoCNF_To skolemFOFtoCNF_E) \/ ~stable skolemFOFtoCNF_E \/
+   greater_or_equal (founding_rate efficient_producers skolemFOFtoCNF_T)
+     (founding_rate first_movers skolemFOFtoCNF_T)
+|- greater_or_equal
+     (founding_rate efficient_producers
+        (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)))
+     (founding_rate first_movers
+        (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)))
+|- founding_rate efficient_producers
+     (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)) =
+   founding_rate first_movers
+     (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)) \/
+   greater
+     (founding_rate efficient_producers
+        (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)))
+     (founding_rate first_movers
+        (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)))
+|- ~greater
+      (disbanding_rate first_movers
+         (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)))
+      (disbanding_rate efficient_producers
+         (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1))) \/
+   greater
+     (growth_rate efficient_producers
+        (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)))
+     (growth_rate first_movers
+        (skolemFOFtoCNF_T_1 (skolemFOFtoCNF_To skolemFOFtoCNF_E_1)))
+SZS output end Saturation for data/problems/all/MGT019+2.tptp
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Problem: data/problems/all/SWV010+1.tptp
+
+Goal:
+a_holds (key at t) /\ party_of_protocol a /\
+message (sent a b (a, an_a_nonce)) /\ a_stored (b, an_a_nonce) /\
+(!U V W X Y Z.
+   message (sent t a (triple (encrypt (quadruple Y Z W V) at) X U)) /\
+   a_stored (Y, Z) ==>
+   message (sent a Y (X, encrypt U W)) /\ a_holds (key W Y)) /\
+b_holds (key bt t) /\ party_of_protocol b /\ fresh_to_b an_a_nonce /\
+(!U V.
+   message (sent U b (U, V)) /\ fresh_to_b V ==>
+   message
+     (sent b t
+        (triple b (generate_b_nonce V)
+           (encrypt (triple U V (generate_expiration_time V)) bt))) /\
+   b_stored (U, V)) /\
+(!V X Y.
+   message
+     (sent X b
+        (encrypt (triple X V (generate_expiration_time Y)) bt,
+         encrypt (generate_b_nonce Y) V)) /\ b_stored (X, Y) ==>
+   b_holds (key V X)) /\ t_holds (key at a) /\ t_holds (key bt b) /\
+party_of_protocol t /\
+(!U V W X Y Z X1.
+   message (sent U t (triple U V (encrypt (triple W X Y) Z))) /\
+   t_holds (key Z U) /\ t_holds (key X1 W) ==>
+   message
+     (sent t W
+        (triple (encrypt (quadruple U X (generate_key X) Y) X1)
+           (encrypt (triple W (generate_key X) Y) Z) V))) ==> F
+
+Clauses:
+a_holds (key at t) /\ party_of_protocol a /\
+message (sent a b (a, an_a_nonce)) /\ a_stored (b, an_a_nonce) /\
+(~a_stored ($Y, $Z) \/
+ ~message (sent t a (triple (encrypt (quadruple $Y $Z $W $V) at) $X $U)) \/
+ a_holds (key $W $Y)) /\
+(~a_stored ($Y, $Z) \/
+ ~message (sent t a (triple (encrypt (quadruple $Y $Z $W $V) at) $X $U)) \/
+ message (sent a $Y ($X, encrypt $U $W))) /\ b_holds (key bt t) /\
+party_of_protocol b /\ fresh_to_b an_a_nonce /\
+(~fresh_to_b $V \/ ~message (sent $U b ($U, $V)) \/ b_stored ($U, $V)) /\
+(~fresh_to_b $V \/ ~message (sent $U b ($U, $V)) \/
+ message
+   (sent b t
+      (triple b (generate_b_nonce $V)
+         (encrypt (triple $U $V (generate_expiration_time $V)) bt)))) /\
+(~b_stored ($X, $Y) \/
+ ~message
+    (sent $X b
+       (encrypt (triple $X $V (generate_expiration_time $Y)) bt,
+        encrypt (generate_b_nonce $Y) $V)) \/ b_holds (key $V $X)) /\
+t_holds (key at a) /\ t_holds (key bt b) /\ party_of_protocol t /\
+(~message (sent $U t (triple $U $V (encrypt (triple $W $X $Y) $Z))) \/
+ ~t_holds (key $X1 $W) \/ ~t_holds (key $Z $U) \/
+ message
+   (sent t $W
+      (triple (encrypt (quadruple $U $X (generate_key $X) $Y) $X1)
+         (encrypt (triple $W (generate_key $X) $Y) $Z) $V)))
+
+% SZS status Satisfiable for data/problems/all/SWV010+1.tptp
+
+SZS output start Saturation for data/problems/all/SWV010+1.tptp
+|- a_holds (key at t)
+|- party_of_protocol a
+|- message (sent a b (a, an_a_nonce))
+|- a_stored (b, an_a_nonce)
+|- ~a_stored ($Y, $Z) \/
+   ~message
+      (sent t a (triple (encrypt (quadruple $Y $Z $W $V) at) $X $U)) \/
+   a_holds (key $W $Y)
+|- ~a_stored ($Y, $Z) \/
+   ~message
+      (sent t a (triple (encrypt (quadruple $Y $Z $W $V) at) $X $U)) \/
+   message (sent a $Y ($X, encrypt $U $W))
+|- b_holds (key bt t)
+|- party_of_protocol b
+|- fresh_to_b an_a_nonce
+|- ~fresh_to_b $V \/ ~message (sent $U b ($U, $V)) \/ b_stored ($U, $V)
+|- ~fresh_to_b $V \/ ~message (sent $U b ($U, $V)) \/
+   message
+     (sent b t
+        (triple b (generate_b_nonce $V)
+           (encrypt (triple $U $V (generate_expiration_time $V)) bt)))
+|- ~b_stored ($X, $Y) \/
+   ~message
+      (sent $X b
+         (encrypt (triple $X $V (generate_expiration_time $Y)) bt,
+          encrypt (generate_b_nonce $Y) $V)) \/ b_holds (key $V $X)
+|- t_holds (key at a)
+|- t_holds (key bt b)
+|- party_of_protocol t
+|- ~message (sent $U t (triple $U $V (encrypt (triple $W $X $Y) $Z))) \/
+   ~t_holds (key $X1 $W) \/ ~t_holds (key $Z $U) \/
+   message
+     (sent t $W
+        (triple (encrypt (quadruple $U $X (generate_key $X) $Y) $X1)
+           (encrypt (triple $W (generate_key $X) $Y) $Z) $V))
+|- b_stored (a, an_a_nonce)
+|- message
+     (sent b t
+        (triple b (generate_b_nonce an_a_nonce)
+           (encrypt
+              (triple a an_a_nonce (generate_expiration_time an_a_nonce))
+              bt)))
+|- ~t_holds (key $_50 a) \/
+   message
+     (sent t a
+        (triple
+           (encrypt
+              (quadruple b an_a_nonce (generate_key an_a_nonce)
+                 (generate_expiration_time an_a_nonce)) $_50)
+           (encrypt
+              (triple a (generate_key an_a_nonce)
+                 (generate_expiration_time an_a_nonce)) bt)
+           (generate_b_nonce an_a_nonce)))
+|- message
+     (sent t a
+        (triple
+           (encrypt
+              (quadruple b an_a_nonce (generate_key an_a_nonce)
+                 (generate_expiration_time an_a_nonce)) at)
+           (encrypt
+              (triple a (generate_key an_a_nonce)
+                 (generate_expiration_time an_a_nonce)) bt)
+           (generate_b_nonce an_a_nonce)))
+|- message
+     (sent a b
+        (encrypt
+           (triple a (generate_key an_a_nonce)
+              (generate_expiration_time an_a_nonce)) bt,
+         encrypt (generate_b_nonce an_a_nonce) (generate_key an_a_nonce)))
+|- a_holds (key (generate_key an_a_nonce) b)
+|- b_holds (key (generate_key an_a_nonce) a)
+SZS output end Saturation for data/problems/all/SWV010+1.tptp
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Problem: data/problems/all/NLP042+1.tptp
+
+Goal:
+(!U V. woman U V ==> female U V) /\
+(!U V. human_person U V ==> animate U V) /\
+(!U V. human_person U V ==> human U V) /\
+(!U V. organism U V ==> living U V) /\
+(!U V. organism U V ==> impartial U V) /\
+(!U V. organism U V ==> entity U V) /\
+(!U V. human_person U V ==> organism U V) /\
+(!U V. woman U V ==> human_person U V) /\
+(!U V. mia_forename U V ==> forename U V) /\
+(!U V. abstraction U V ==> unisex U V) /\
+(!U V. abstraction U V ==> general U V) /\
+(!U V. abstraction U V ==> nonhuman U V) /\
+(!U V. abstraction U V ==> thing U V) /\
+(!U V. relation U V ==> abstraction U V) /\
+(!U V. relname U V ==> relation U V) /\
+(!U V. forename U V ==> relname U V) /\
+(!U V. object U V ==> unisex U V) /\
+(!U V. object U V ==> impartial U V) /\
+(!U V. object U V ==> nonliving U V) /\
+(!U V. entity U V ==> existent U V) /\
+(!U V. entity U V ==> specific U V) /\ (!U V. entity U V ==> thing U V) /\
+(!U V. object U V ==> entity U V) /\
+(!U V. substance_matter U V ==> object U V) /\
+(!U V. food U V ==> substance_matter U V) /\
+(!U V. beverage U V ==> food U V) /\
+(!U V. shake_beverage U V ==> beverage U V) /\
+(!U V. order U V ==> event U V) /\
+(!U V. eventuality U V ==> unisex U V) /\
+(!U V. eventuality U V ==> nonexistent U V) /\
+(!U V. eventuality U V ==> specific U V) /\
+(!U V. thing U V ==> singleton U V) /\
+(!U V. eventuality U V ==> thing U V) /\
+(!U V. event U V ==> eventuality U V) /\ (!U V. act U V ==> event U V) /\
+(!U V. order U V ==> act U V) /\ (!U V. animate U V ==> ~nonliving U V) /\
+(!U V. existent U V ==> ~nonexistent U V) /\
+(!U V. nonhuman U V ==> ~human U V) /\
+(!U V. nonliving U V ==> ~living U V) /\
+(!U V. specific U V ==> ~general U V) /\
+(!U V. unisex U V ==> ~female U V) /\
+(!U V W.
+   entity U V /\ forename U W /\ of U W V ==>
+   ~?X. forename U X /\ ~(X = W) /\ of U X V) /\
+(!U V W X.
+   nonreflexive U V /\ agent U V W /\ patient U V X ==> ~(W = X)) ==>
+~?U.
+   actual_world U /\
+   ?V W X Y.
+     of U W V /\ woman U V /\ mia_forename U W /\ forename U W /\
+     shake_beverage U X /\ event U Y /\ agent U Y V /\ patient U Y X /\
+     past U Y /\ nonreflexive U Y /\ order U Y
+
+Clauses:
+(~woman $U $V \/ female $U $V) /\ (~human_person $U $V \/ animate $U $V) /\
+(~human_person $U $V \/ human $U $V) /\
+(~organism $U $V \/ living $U $V) /\
+(~organism $U $V \/ impartial $U $V) /\
+(~organism $U $V \/ entity $U $V) /\
+(~human_person $U $V \/ organism $U $V) /\
+(~woman $U $V \/ human_person $U $V) /\
+(~mia_forename $U $V \/ forename $U $V) /\
+(~abstraction $U $V \/ unisex $U $V) /\
+(~abstraction $U $V \/ general $U $V) /\
+(~abstraction $U $V \/ nonhuman $U $V) /\
+(~abstraction $U $V \/ thing $U $V) /\
+(~relation $U $V \/ abstraction $U $V) /\
+(~relname $U $V \/ relation $U $V) /\ (~forename $U $V \/ relname $U $V) /\
+(~object $U $V \/ unisex $U $V) /\ (~object $U $V \/ impartial $U $V) /\
+(~object $U $V \/ nonliving $U $V) /\ (~entity $U $V \/ existent $U $V) /\
+(~entity $U $V \/ specific $U $V) /\ (~entity $U $V \/ thing $U $V) /\
+(~object $U $V \/ entity $U $V) /\
+(~substance_matter $U $V \/ object $U $V) /\
+(~food $U $V \/ substance_matter $U $V) /\
+(~beverage $U $V \/ food $U $V) /\
+(~shake_beverage $U $V \/ beverage $U $V) /\
+(~order $U $V \/ event $U $V) /\ (~eventuality $U $V \/ unisex $U $V) /\
+(~eventuality $U $V \/ nonexistent $U $V) /\
+(~eventuality $U $V \/ specific $U $V) /\
+(~thing $U $V \/ singleton $U $V) /\ (~eventuality $U $V \/ thing $U $V) /\
+(~event $U $V \/ eventuality $U $V) /\ (~act $U $V \/ event $U $V) /\
+(~order $U $V \/ act $U $V) /\ (~animate $U $V \/ ~nonliving $U $V) /\
+(~existent $U $V \/ ~nonexistent $U $V) /\
+(~human $U $V \/ ~nonhuman $U $V) /\ (~living $U $V \/ ~nonliving $U $V) /\
+(~general $U $V \/ ~specific $U $V) /\ (~female $U $V \/ ~unisex $U $V) /\
+(~entity $U $V \/ ~forename $U $W \/ ~forename $U $X \/ ~of $U $W $V \/
+ ~of $U $X $V \/ $X = $W) /\
+(~($W = $X) \/ ~agent $U $V $W \/ ~nonreflexive $U $V \/
+ ~patient $U $V $X) /\ actual_world skolemFOFtoCNF_U /\
+agent skolemFOFtoCNF_U skolemFOFtoCNF_Y skolemFOFtoCNF_V /\
+event skolemFOFtoCNF_U skolemFOFtoCNF_Y /\
+forename skolemFOFtoCNF_U skolemFOFtoCNF_W /\
+mia_forename skolemFOFtoCNF_U skolemFOFtoCNF_W /\
+nonreflexive skolemFOFtoCNF_U skolemFOFtoCNF_Y /\
+of skolemFOFtoCNF_U skolemFOFtoCNF_W skolemFOFtoCNF_V /\
+order skolemFOFtoCNF_U skolemFOFtoCNF_Y /\
+past skolemFOFtoCNF_U skolemFOFtoCNF_Y /\
+patient skolemFOFtoCNF_U skolemFOFtoCNF_Y skolemFOFtoCNF_X /\
+shake_beverage skolemFOFtoCNF_U skolemFOFtoCNF_X /\
+woman skolemFOFtoCNF_U skolemFOFtoCNF_V
+
+% SZS status CounterSatisfiable for data/problems/all/NLP042+1.tptp
+
+SZS output start Saturation for data/problems/all/NLP042+1.tptp
+|- ~woman $U $V \/ female $U $V
+|- ~human_person $U $V \/ animate $U $V
+|- ~human_person $U $V \/ human $U $V
+|- ~organism $U $V \/ living $U $V
+|- ~organism $U $V \/ impartial $U $V
+|- ~organism $U $V \/ entity $U $V
+|- ~human_person $U $V \/ organism $U $V
+|- ~woman $U $V \/ human_person $U $V
+|- ~mia_forename $U $V \/ forename $U $V
+|- ~abstraction $U $V \/ unisex $U $V
+|- ~abstraction $U $V \/ general $U $V
+|- ~abstraction $U $V \/ nonhuman $U $V
+|- ~abstraction $U $V \/ thing $U $V
+|- ~relation $U $V \/ abstraction $U $V
+|- ~relname $U $V \/ relation $U $V
+|- ~forename $U $V \/ relname $U $V
+|- ~object $U $V \/ unisex $U $V
+|- ~object $U $V \/ impartial $U $V
+|- ~object $U $V \/ nonliving $U $V
+|- ~entity $U $V \/ existent $U $V
+|- ~entity $U $V \/ specific $U $V
+|- ~entity $U $V \/ thing $U $V
+|- ~object $U $V \/ entity $U $V
+|- ~substance_matter $U $V \/ object $U $V
+|- ~food $U $V \/ substance_matter $U $V
+|- ~beverage $U $V \/ food $U $V
+|- ~shake_beverage $U $V \/ beverage $U $V
+|- ~order $U $V \/ event $U $V
+|- ~eventuality $U $V \/ unisex $U $V
+|- ~eventuality $U $V \/ nonexistent $U $V
+|- ~eventuality $U $V \/ specific $U $V
+|- ~thing $U $V \/ singleton $U $V
+|- ~eventuality $U $V \/ thing $U $V
+|- ~event $U $V \/ eventuality $U $V
+|- ~act $U $V \/ event $U $V
+|- ~order $U $V \/ act $U $V
+|- ~animate $U $V \/ ~nonliving $U $V
+|- ~existent $U $V \/ ~nonexistent $U $V
+|- ~human $U $V \/ ~nonhuman $U $V
+|- ~living $U $V \/ ~nonliving $U $V
+|- ~general $U $V \/ ~specific $U $V
+|- ~female $U $V \/ ~unisex $U $V
+|- ~entity $U $V \/ ~forename $U $W \/ ~forename $U $X \/ ~of $U $W $V \/
+   ~of $U $X $V \/ $X = $W
+|- ~agent $U $V $X \/ ~nonreflexive $U $V \/ ~patient $U $V $X
+|- actual_world skolemFOFtoCNF_U
+|- agent skolemFOFtoCNF_U skolemFOFtoCNF_Y skolemFOFtoCNF_V
+|- event skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- forename skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- mia_forename skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- nonreflexive skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- of skolemFOFtoCNF_U skolemFOFtoCNF_W skolemFOFtoCNF_V
+|- order skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- past skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- patient skolemFOFtoCNF_U skolemFOFtoCNF_Y skolemFOFtoCNF_X
+|- shake_beverage skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- woman skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- female skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- human_person skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- organism skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- human skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- animate skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- entity skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- impartial skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- living skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- relname skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- relation skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- abstraction skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- thing skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- nonhuman skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- general skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- unisex skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- existent skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- specific skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- thing skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- beverage skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- food skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- substance_matter skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- object skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- entity skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- nonliving skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- impartial skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- unisex skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- thing skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- specific skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- existent skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- singleton skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- singleton skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- singleton skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- eventuality skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- thing skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- specific skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- nonexistent skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- unisex skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- singleton skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- act skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- ~animate skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- ~existent skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- ~human skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- ~living skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- ~general skolemFOFtoCNF_U skolemFOFtoCNF_V
+|- ~general skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- ~general skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- ~female skolemFOFtoCNF_U skolemFOFtoCNF_W
+|- ~female skolemFOFtoCNF_U skolemFOFtoCNF_X
+|- ~female skolemFOFtoCNF_U skolemFOFtoCNF_Y
+|- ~agent skolemFOFtoCNF_U skolemFOFtoCNF_Y skolemFOFtoCNF_X
+|- ~forename skolemFOFtoCNF_U $_198 \/
+   ~of skolemFOFtoCNF_U $_198 skolemFOFtoCNF_V \/ $_198 = skolemFOFtoCNF_W
+SZS output end Saturation for data/problems/all/NLP042+1.tptp
+
