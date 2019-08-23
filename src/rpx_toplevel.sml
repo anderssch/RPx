@@ -315,10 +315,10 @@ val next_cnf =
 
               val filename = "cnf_" ^ Int.toString (next_cnf ()) ^ ".tptp"
             in
-              Tptp.write
+              () (*Tptp.write
                 {problem = problem,
                  mapping = mapping,
-                 filename = filename}
+                 filename = filename} *)
             end)
 
         val () = display_clauses cls
