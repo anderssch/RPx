@@ -64,6 +64,7 @@ datatype status =
   | SatisfiableStatus
   | UnknownStatus
   | UnsatisfiableStatus
+  | InappropriateStatus
 
 val toStringStatus : status -> string
 

@@ -547,7 +547,8 @@ datatype status =
   | TheoremStatus
   | SatisfiableStatus
   | UnknownStatus
-  | UnsatisfiableStatus;
+  | UnsatisfiableStatus
+  | InappropriateStatus;
 
 fun toStringStatus status =
     case status of
@@ -555,7 +556,8 @@ fun toStringStatus status =
     | TheoremStatus => "Theorem"
     | SatisfiableStatus => "Satisfiable"
     | UnknownStatus => "Unknown"
-    | UnsatisfiableStatus => "Unsatisfiable";
+    | UnsatisfiableStatus => "Unsatisfiable"
+    | InappropriateStatus => "Inappropriate";
 
 val ppStatus = Print.ppMap toStringStatus Print.ppString;
 

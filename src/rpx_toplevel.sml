@@ -546,8 +546,10 @@ fun clauseOfFormulaBody (Tptp.FofFormulaBody f) = List.concat (map LiteralSet.to
 (* Convert to RP expressions *)
 fun termOfTerm (Term.Var x) = RPx.Var ((Name.toString x)) |
     termOfTerm (Term.Fn (f,ts)) = RPx.Fun ((Name.toString f), map termOfTerm ts);
+                                         
+exception SZS_Status_Inappropriate
 
-fun termOfAtm (r,ts) = RPx.Fun ( (Name.toString r), map termOfTerm ts)
+fun termOfAtm (r,ts) = if Name.toString r = "=" then raise SZS_Status_Inappropriate else RPx.Fun ((Name.toString r), map termOfTerm ts) 
 
 fun litOfLit (p,a : Atom.atom) = (if p then RPx.Pos else RPx.Neg) (termOfAtm a);
 
@@ -685,7 +687,14 @@ fun refuteAll limit filename tptp probs acc =
               in
                 false
               end)
-        end);
+        end) 
+        handle SZS_Status_Inappropriate => 
+          (let
+             val status = Tptp.InappropriateStatus
+             val () = display_status filename status
+           in
+             false
+           end)
 
   fun prove limit mapping filename =
       (let
