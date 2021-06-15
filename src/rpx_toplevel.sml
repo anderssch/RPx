@@ -16,9 +16,9 @@ open Useful;
 
 val PROGRAM = "RPx";
 
-val VERSION = "X.Z";
+val VERSION = "1.0";
 
-val versionString = PROGRAM^" "^VERSION^" (release 2019ZZZZ)"^"\n";
+val versionString = PROGRAM^" "^VERSION^" (release 20210615)"^"\n";
 
 (* ------------------------------------------------------------------------- *)
 (* Program options.                                                          *)
