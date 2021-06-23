@@ -34,6 +34,8 @@ val QUIET = ref false;
 
 val TEST = ref false;
 
+val EQL = ref false;
+
 val extended_items = "all" :: ITEMS;
 
 val show_items = List.map (fn s => (s, ref false)) ITEMS;
@@ -89,7 +91,10 @@ fun hide "all" = show_set false
       processor = beginOpt endOpt (fn _ => QUIET := true)},
      {switches = ["--test"], arguments = [],
       description = "Skip the proof search for the input problems",
-      processor = beginOpt endOpt (fn _ => TEST := true)}*)];
+      processor = beginOpt endOpt (fn _ => TEST := true)}*)
+     {switches = ["--eql"], arguments = ([] : string list),
+      description = "Interpret = as an arbitrary predicate instead of reporting SZS_Status_Inappropriate",
+      processor = beginOpt endOpt (fn _ => EQL := true)}];
 
 
 val programOptions =
@@ -549,7 +554,7 @@ fun termOfTerm (Term.Var x) = RPx.Var ((Name.toString x)) |
                                          
 exception SZS_Status_Inappropriate
 
-fun termOfAtm (r,ts) = if Name.toString r = "=" then raise SZS_Status_Inappropriate else RPx.Fun ((Name.toString r), map termOfTerm ts) 
+fun termOfAtm (r,ts) = if Name.toString r = "=" andalso not (!EQL) then raise SZS_Status_Inappropriate else RPx.Fun ((Name.toString r), map termOfTerm ts) 
 
 fun litOfLit (p,a : Atom.atom) = (if p then RPx.Pos else RPx.Neg) (termOfAtm a);
 
